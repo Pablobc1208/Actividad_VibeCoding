@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web no oficial de Formula 1. Noticias, calendario y clasificaciones.">
+    <title>F1 Racing Hub</title>
+    <!-- Modern Font Setup -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo" aria-label="Inicio">
+                F1 <span class="accent-text">HUB</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="#latest-news" class="nav-link">Noticias</a></li>
+                    <li><a href="#standings" class="nav-link">Clasificación</a></li>
+                    <li><a href="#schedule" class="nav-link">Calendario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" aria-label="Noticia Principal">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="tag">GP Destacado</span>
+                    <h1 class="hero-title">Gran Premio de <span class="text-gradient">Mónaco</span></h1>
+                    <p class="hero-subtitle">La joya de la corona del automovilismo regresa con más emoción que nunca.</p>
+                    <a href="#schedule" class="btn btn-primary">Ver Horarios</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Grid Section -->
+        <section id="latest-news" class="news-section">
+            <div class="container">
+                <h2 class="section-title">Últimas Noticias</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="card-image placeholder-anim"></div>
+                        <div class="card-content">
+                            <span class="date">Hace 2 horas</span>
+                            <h3>Análisis Técnico: Las mejoras de Mercedes</h3>
+                            <p>Desglosamos las nuevas actualizaciones aerodinámicas del W15.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="card-image placeholder-anim"></div>
+                        <div class="card-content">
+                            <span class="date">Hace 5 horas</span>
+                            <h3>Declaraciones Post-Carrera</h3>
+                            <p>Verstappen comenta sobre su estrategia de neumáticos en la última vuelta.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="card-image placeholder-anim"></div>
+                        <div class="card-content">
+                            <span class="date">Ayer</span>
+                            <h3>Mercado de Pilotos 2025</h3>
+                            <p>Rumores intensos sobre el asiento libre en Red Bull Racing.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drivers Standings Preview -->
+        <section id="standings" class="standings-section">
+            <div class="container">
+                <h2 class="section-title">Campeonato de Pilotos</h2>
+                <div class="standings-table-wrapper">
+                    <table class="standings-table">
+                        <caption class="sr-only">Tabla de clasificación de pilotos temporada actual</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Pos</th>
+                                <th scope="col">Piloto</th>
+                                <th scope="col" class="hide-mobile">Equipo</th>
+                                <th scope="col">Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="leader">
+                                <td>1</td>
+                                <td class="driver-info">
+                                    <span class="team-color-bar" style="--team-color: #3671C6;"></span>
+                                    M. Verstappen
+                                </td>
+                                <td class="hide-mobile">Red Bull Racing</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="driver-info">
+                                    <span class="team-color-bar" style="--team-color: #F91536;"></span>
+                                    C. Leclerc
+                                </td>
+                                <td class="hide-mobile">Ferrari</td>
+                                <td>98</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="driver-info">
+                                    <span class="team-color-bar" style="--team-color: #F58020;"></span>
+                                    L. Norris
+                                </td>
+                                <td class="hide-mobile">McLaren</td>
+                                <td>85</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="centered-action">
+                    <a href="#" class="btn btn-secondary">Ver Clasificación Completa</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo">F1 <span class="accent-text">HUB</span></span>
+                <p>Pasión por la velocidad y la tecnología.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <!-- Icons would go here -->
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 F1 Hub. Proyecto demostrativo no oficial.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
