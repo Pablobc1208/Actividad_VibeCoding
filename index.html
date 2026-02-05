@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
 
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -40,7 +41,8 @@
 
     <main id="main-content">
         <!-- Hero Section -->
-        <section id="hero" class="hero-section" aria-label="Noticia Principal">
+        <section id="hero" class="hero-section" aria-label="Noticia Principal"
+            style="background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), var(--bg-color)), url('img/carlos_fernando.jpg'); background-size: cover; background-position: center;">
             <div class="container hero-container">
                 <div class="hero-content">
                     <span class="tag">GP de España 2025</span>
@@ -59,7 +61,7 @@
                 <div class="news-grid">
                     <article class="news-card">
                         <div class="card-image"
-                            style="background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto/q_auto/content/dam/fom-website/manual/Misc/2024/GettyImages-2149567781'); background-size: cover; background-position: center;">
+                            style="background-image: url('img/coche_williams.webp'); background-size: cover; background-position: center;">
                         </div>
                         <div class="card-content">
                             <span class="date">Hace 2 horas</span>
@@ -71,7 +73,7 @@
                     </article>
                     <article class="news-card">
                         <div class="card-image"
-                            style="background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto/q_auto/content/dam/fom-website/manual/Misc/2024/GettyImages-2147895432'); background-size: cover; background-position: center;">
+                            style="background-image: url('img/redbull_mclaren.jpg'); background-size: cover; background-position: center;">
                         </div>
                         <div class="card-content">
                             <span class="date">Hace 5 horas</span>
@@ -83,7 +85,7 @@
                     </article>
                     <article class="news-card">
                         <div class="card-image"
-                            style="background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto/q_auto/content/dam/fom-website/manual/Misc/2024/GettyImages-2150123456'); background-size: cover; background-position: center;">
+                            style="background-image: url('img/coche_aston.jpg'); background-size: cover; background-position: center;">
                         </div>
                         <div class="card-content">
                             <span class="date">Ayer</span>
@@ -102,49 +104,337 @@
             <div class="container">
                 <h2 class="section-title">Campeonato de Pilotos</h2>
                 <div class="standings-table-wrapper">
-                    <table class="standings-table">
-                        <caption class="sr-only">Tabla de clasificación de pilotos temporada actual</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Pos</th>
-                                <th scope="col">Piloto</th>
-                                <th scope="col" class="hide-mobile">Equipo</th>
-                                <th scope="col">Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="leader">
-                                <td>1</td>
-                                <td class="driver-info">
-                                    <span class="team-color-bar" style="--team-color: #3671C6;"></span>
-                                    M. Verstappen
-                                </td>
-                                <td class="hide-mobile">Red Bull Racing</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td class="driver-info">
-                                    <span class="team-color-bar" style="--team-color: #F91536;"></span>
-                                    C. Leclerc
-                                </td>
-                                <td class="hide-mobile">Ferrari</td>
-                                <td>98</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td class="driver-info">
-                                    <span class="team-color-bar" style="--team-color: #F58020;"></span>
-                                    L. Norris
-                                </td>
-                                <td class="hide-mobile">McLaren</td>
-                                <td>85</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- Tabs Navigation -->
+                    <div class="standings-tabs">
+                        <button class="tab-btn active" data-tab="drivers">Pilotos</button>
+                        <button class="tab-btn" data-tab="constructors">Constructores</button>
+                    </div>
+
+                    <!-- DRIVERS TAB -->
+                    <div id="drivers-content" class="tab-content active">
+                        <div class="standings-table-wrapper">
+                            <table class="standings-table" id="drivers-table">
+                                <caption class="sr-only">Clasificación de Pilotos 2025</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pos</th>
+                                        <th scope="col">Piloto</th>
+                                        <th scope="col" class="hide-mobile">Equipo</th>
+                                        <th scope="col">Pts</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Top 10 -->
+                                    <tr class="leader">
+                                        <td>1</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #3671C6;"></span> M. Verstappen</td>
+                                        <td class="hide-mobile">Red Bull Racing</td>
+                                        <td>136</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #F58020;"></span> L. Norris</td>
+                                        <td class="hide-mobile">McLaren</td>
+                                        <td>129</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #F91536;"></span> C. Leclerc</td>
+                                        <td class="hide-mobile">Ferrari</td>
+                                        <td>118</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #00D2BE;"></span> G. Russell</td>
+                                        <td class="hide-mobile">Mercedes</td>
+                                        <td>95</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #00A0DE;"></span> C. Sainz</td>
+                                        <td class="hide-mobile">Williams</td>
+                                        <td>68</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #F91536;"></span> L. Hamilton</td>
+                                        <td class="hide-mobile">Ferrari</td>
+                                        <td>62</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #229971;"></span> F. Alonso</td>
+                                        <td class="hide-mobile">Aston Martin</td>
+                                        <td>45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #F58020;"></span> O. Piastri</td>
+                                        <td class="hide-mobile">McLaren</td>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #3671C6;"></span> L. Lawson</td>
+                                        <td class="hide-mobile">Red Bull Racing</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #00D2BE;"></span> K. Antonelli</td>
+                                        <td class="hide-mobile">Mercedes</td>
+                                        <td>15</td>
+                                    </tr>
+                                </tbody>
+                                <tbody id="full-drivers" class="extended-rows hidden-content">
+                                    <!-- Bottom 10 -->
+                                    <tr>
+                                        <td>11</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #00A0DE;"></span> A. Albon</td>
+                                        <td class="hide-mobile">Williams</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #0093cc;"></span> P. Gasly</td>
+                                        <td class="hide-mobile">Alpine</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #B6BABD;"></span> E. Ocon</td>
+                                        <td class="hide-mobile">Haas</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #6692FF;"></span> Y. Tsunoda</td>
+                                        <td class="hide-mobile">RB</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #52e252;"></span> N. Hulkenberg</td>
+                                        <td class="hide-mobile">Sauber</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #229971;"></span> L. Stroll</td>
+                                        <td class="hide-mobile">Aston Martin</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #B6BABD;"></span> O. Bearman</td>
+                                        <td class="hide-mobile">Haas</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #0093cc;"></span> J. Doohan</td>
+                                        <td class="hide-mobile">Alpine</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #52e252;"></span> G. Bortoleto</td>
+                                        <td class="hide-mobile">Sauber</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #6692FF;"></span> I. Hadjar</td>
+                                        <td class="hide-mobile">RB</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="centered-action">
+                            <button id="toggle-drivers-btn" class="btn btn-secondary">Ver Parrilla Completa
+                                (20)</button>
+                        </div>
+                    </div>
+
+                    <!-- CONSTRUCTORS TAB -->
+                    <div id="constructors-content" class="tab-content">
+                        <div class="standings-table-wrapper">
+                            <table class="standings-table">
+                                <caption class="sr-only">Campeonato de Constructores 2025</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pos</th>
+                                        <th scope="col">Equipo</th>
+                                        <th scope="col">Pts</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="leader">
+                                        <td>1</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #3671C6;"></span> Red Bull Racing</td>
+                                        <td>164</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #F91536;"></span> Ferrari</td>
+                                        <td>180</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #F58020;"></span> McLaren</td>
+                                        <td>169</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #00D2BE;"></span> Mercedes</td>
+                                        <td>110</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #00A0DE;"></span> Williams</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #229971;"></span> Aston Martin</td>
+                                        <td>47</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #0093cc;"></span> Alpine</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #B6BABD;"></span> Haas F1 Team</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #6692FF;"></span> Visa Cash App RB</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="driver-info"><span class="team-color-bar"
+                                                style="--team-color: #52e252;"></span> Sauber</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="centered-action">
-                    <a href="#" class="btn btn-secondary">Ver Clasificación Completa</a>
+        </section>
+
+        <!-- 2025 Calendar Section -->
+        <section id="schedule" class="schedule-section">
+            <div class="container">
+                <h2 class="section-title">Calendario F1 2025</h2>
+                <div class="calendar-grid">
+                    <div class="calendar-card completed">
+                        <div class="gp-date">
+                            <span class="day">16</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <div class="gp-info">
+                            <h4>GP de Australia</h4>
+                            <p class="circuit">Albert Park Circuit</p>
+                            <span class="status-badge">Completado</span>
+                        </div>
+                    </div>
+                    <div class="calendar-card completed">
+                        <div class="gp-date">
+                            <span class="day">23</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <div class="gp-info">
+                            <h4>GP de China</h4>
+                            <p class="circuit">Shanghai International Circuit</p>
+                            <span class="status-badge">Completado</span>
+                        </div>
+                    </div>
+                    <div class="calendar-card active-gp">
+                        <div class="gp-date">
+                            <span class="day">06</span>
+                            <span class="month">ABR</span>
+                        </div>
+                        <div class="gp-info">
+                            <h4>GP de Japón</h4>
+                            <p class="circuit">Suzuka International Racing Course</p>
+                            <span class="status-badge next">Próximo</span>
+                        </div>
+                    </div>
+                    <div class="calendar-card">
+                        <div class="gp-date">
+                            <span class="day">13</span>
+                            <span class="month">ABR</span>
+                        </div>
+                        <div class="gp-info">
+                            <h4>GP de Baréin</h4>
+                            <p class="circuit">Bahrain International Circuit</p>
+                        </div>
+                    </div>
+                    <div class="calendar-card">
+                        <div class="gp-date">
+                            <span class="day">20</span>
+                            <span class="month">ABR</span>
+                        </div>
+                        <div class="gp-info">
+                            <h4>GP de Arabia Saudí</h4>
+                            <p class="circuit">Jeddah Corniche Circuit</p>
+                        </div>
+                    </div>
+                    <div class="calendar-card">
+                        <div class="gp-date">
+                            <span class="day">04</span>
+                            <span class="month">MAY</span>
+                        </div>
+                        <div class="gp-info">
+                            <h4>GP de Miami</h4>
+                            <p class="circuit">Miami International Autodrome</p>
+                        </div>
+                    </div>
+                    <div class="calendar-card special-gp">
+                        <div class="gp-date">
+                            <span class="day">01</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="gp-info">
+                            <h4>GP de España</h4>
+                            <p class="circuit">Circuit de Barcelona-Catalunya</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -178,7 +468,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

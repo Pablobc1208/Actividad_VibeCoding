@@ -596,13 +596,12 @@ img {
 }
 
 /* Initial state for animated elements */
+/* Initial state for animated elements - REMOVED to ensure visibility */
 .news-card,
 .section-title,
 .hero-content {
-    opacity: 0;
-    /* Javascript will trigger animation */
-    animation-fill-mode: forwards;
-    /* Ensure they stay visible if JS fails/or added manually */
+    /* opacity: 0; REMOVED for safety */
+    /* Animation will still trigger but elements are visible by default */
 }
 
 /* Fallback if JS is disabled */
@@ -615,5 +614,68 @@ img {
         opacity: 1;
         animation: none;
         transform: none;
+    }
+}
+
+/* Tabs Section */
+.standings-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: var(--font-heading);
+}
+
+.tab-btn:hover {
+    color: var(--text-main);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: skew(-20deg);
+}
+
+/* Tab Content Visibility */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -7,7 +7,53 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initScrollAnimations();
     initSmoothScroll();
+    initDriversToggle();
+    initTabs();
 });
+
+/**
+ * Toggle Full Drivers Grid (10 -> 20)
+ */
+function initDriversToggle() {
+    const toggleBtn = document.getElementById('toggle-drivers-btn');
+    const hiddenRows = document.getElementById('full-drivers');
+
+    if (!toggleBtn || !hiddenRows) return;
+
+    toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isVisible = hiddenRows.classList.contains('visible');
+
+        if (isVisible) {
+            hiddenRows.classList.remove('visible');
+            toggleBtn.textContent = 'Ver Parrilla Completa (20)';
+        } else {
+            hiddenRows.classList.add('visible');
+            toggleBtn.textContent = 'Ocultar Parrilla';
+        }
+    });
+}
+
+/**
+ * Tabs Logic (Drivers vs Constructors)
+ */
+function initTabs() {
+    const buttons = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active classes
+            buttons.forEach(b => b.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            // Add active to current
+            btn.classList.add('active');
+            const tabId = btn.getAttribute('data-tab');
+            document.getElementById(`${tabId}-content`).classList.add('active');
+        });
+    });
+}
 
 /**
  * Mobile Navigation Toggle
@@ -16,24 +62,24 @@ function initMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.getElementById('main-nav');
     const hamburger = document.querySelector('.hamburger-inner');
-    
+
     if (!menuBtn || !nav) return;
 
     menuBtn.addEventListener('click', () => {
         const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-        
+
         // Toggle Menu State
         menuBtn.setAttribute('aria-expanded', !isExpanded);
         nav.classList.toggle('active');
-        
+
         // Animate Hamburger (Simple Class Toggle strategy)
         if (!isExpanded) {
             hamburger.style.background = 'transparent';
             hamburger.style.transform = 'rotate(45deg)'; // Custom simple logic for demo
             // In a real production app with more css, we'd toggle a class on the parent
         } else {
-             hamburger.style.background = '';
-             hamburger.style.transform = '';
+            hamburger.style.background = '';
+            hamburger.style.transform = '';
         }
     });
 
@@ -79,7 +125,7 @@ function initSmoothScroll() {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const headerOffset = 80;
@@ -90,7 +136,7 @@ function initSmoothScroll() {
                     top: offsetPosition,
                     behavior: "smooth"
                 });
-                
+
                 // Close mobile menu if open
                 const nav = document.getElementById('main-nav');
                 if (nav.classList.contains('active')) {
