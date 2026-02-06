@@ -63,4 +63,7 @@ Describas brevemente el concepto de diseño que vas a aplicar (paleta de colores
 12. "Añade todos mis promt a el README.md"
 
 13. (Le mando una foto) "Quitame este apartado de aqui que no lo quiero"
+
 14. "Quiero que me cambies el orden de la clasificacion y pongas que los que tengan mas puntos sean los primeros"
+
+15. "La foto del inicio a perdido calidad intenta arreglarlo"

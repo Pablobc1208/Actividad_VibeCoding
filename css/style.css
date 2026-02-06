@@ -285,12 +285,13 @@ img {
     padding-top: 120px;
     /* Space for fixed header */
     padding-bottom: var(--spacing-lg);
-    background: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), var(--bg-color)), url('../img/formula1.png') no-repeat center center/cover;
-    /* Placeholder URL, fallback gradient */
+    background: linear-gradient(to bottom, rgba(16, 16, 16, 0.3), var(--bg-color)), url('../img/formula1_hero_premium.png') no-repeat center center/cover;
     min-height: 80vh;
     display: flex;
     align-items: center;
     position: relative;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+    /* Add depth without washing out */
 }
 
 .hero-section::before {
