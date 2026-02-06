@@ -1,0 +1,33 @@
+:root {
+    /* Colors */
+    --primary-color: #FF1801;
+    /* F1 Red */
+    --primary-hover: #D01401;
+    --secondary-color: #1F1F1F;
+    /* Asphalt Gray */
+    --bg-color: #101010;
+    /* Deep Black */
+    --bg-accent: #151515;
+    --text-main: #FFFFFF;
+    --text-muted: #D1D1D1;
+    --accent-cyan: #00D2BE;
+    --border-color: #333333;
+
+    /* Typography */
+    --font-heading: 'Chakra Petch', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --container-width: 1200px;
+
+    /* Effects */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --glass-bg: rgba(31, 31, 31, 0.7);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+}

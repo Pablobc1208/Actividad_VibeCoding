@@ -1,0 +1,107 @@
+/* Section: Hero */
+.hero-section {
+    padding-top: 120px;
+    padding-bottom: var(--spacing-lg);
+    background: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), var(--bg-color)), url('../img/formula1.png') no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 20px,
+            rgba(255, 255, 255, 0.03) 20px,
+            rgba(255, 255, 255, 0.03) 40px);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tag {
+    background-color: rgba(255, 24, 1, 0.2);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.hero-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Section: News */
+.news-section {
+    padding: var(--spacing-lg) 0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+/* Section: Schedule */
+.schedule-section {
+    padding: var(--spacing-lg) 0;
+    background: linear-gradient(to top, var(--bg-color), rgba(21, 21, 21, 0.9));
+}
+
+.calendar-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+}
+
+.calendar-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.calendar-grid::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.calendar-grid::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* Responsive Overrides */
+@media (min-width: 768px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}

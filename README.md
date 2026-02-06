@@ -67,3 +67,7 @@ Describas brevemente el concepto de diseño que vas a aplicar (paleta de colores
 14. "Quiero que me cambies el orden de la clasificacion y pongas que los que tengan mas puntos sean los primeros"
 
 15. "La foto del inicio a perdido calidad intenta arreglarlo"
+
+16. "Hay mucho codigo refactoriza el codigo"
+
+17. "Quiero que vuelvas a meter las 24 carreras que hay en una temporada  y que vuelvas a ordenar la clasificacion por puntos el que tenga mas primero y asi hacia abajo"
